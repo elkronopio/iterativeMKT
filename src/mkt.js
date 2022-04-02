@@ -259,7 +259,7 @@ const Mkt = ({}) => {
   }
 
   function compute() {
-    alert("Vamos de nuevo again with csv");
+    //alert("Vamos de nuevo again 3");
     const final = method(th, U);
     let dataMicro = [];
     for (let i = 0; i < final.uMicro.length; i++) {
@@ -487,8 +487,8 @@ const Mkt = ({}) => {
             type="file"
             id="file-selector"
             accept=".csv"
-            //onChange={(e) => readFile(e)}
-            onChange={changeHandler}
+            onChange={(e) => readFile(e)}
+            //onChange={changeHandler}
           ></input>
         </Row>
         <Row>{"Execute"} </Row>
