@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/iterativeMKT/static/css/main.fa3a4d46.css",
-    "main.js": "/iterativeMKT/static/js/main.c4b6ca60.js",
+    "main.js": "/iterativeMKT/static/js/main.54c99566.js",
     "static/js/787.1ab6f8f4.chunk.js": "/iterativeMKT/static/js/787.1ab6f8f4.chunk.js",
     "index.html": "/iterativeMKT/index.html",
     "main.fa3a4d46.css.map": "/iterativeMKT/static/css/main.fa3a4d46.css.map",
-    "main.c4b6ca60.js.map": "/iterativeMKT/static/js/main.c4b6ca60.js.map",
+    "main.54c99566.js.map": "/iterativeMKT/static/js/main.54c99566.js.map",
     "787.1ab6f8f4.chunk.js.map": "/iterativeMKT/static/js/787.1ab6f8f4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fa3a4d46.css",
-    "static/js/main.c4b6ca60.js"
+    "static/js/main.54c99566.js"
   ]
 }
