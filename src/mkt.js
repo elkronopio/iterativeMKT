@@ -258,7 +258,7 @@ const Mkt = ({}) => {
   }
 
   function compute() {
-    alert("Vamos de nuevo again");
+    alert("Vamos de nuevo again2");
     const final = method(th, U);
     let dataMicro = [];
     for (let i = 0; i < final.uMicro.length; i++) {
@@ -359,6 +359,7 @@ const Mkt = ({}) => {
     const reader = new FileReader();
     reader.onload = async (e) => {
       const text = e.target.result;
+      console.log("this is text", text);
 
       const data = CSVToArray(text, ",");
       let U = [];
