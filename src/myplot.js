@@ -53,7 +53,6 @@ const ScatterPlot = ({ data, dataFit, dataFit2, width, height }) => {
         backgroundColor: "rgba(255, 99, 132, 1)",
       },
       {
-        type: "line",
         label: "Microscopic angle estimation",
         data: dataFit,
         backgroundColor: "rgba(132, 99, 255, 0.3)",
@@ -62,7 +61,6 @@ const ScatterPlot = ({ data, dataFit, dataFit2, width, height }) => {
         borderColor: "rgba(132, 99, 255, 0.3)",
       },
       {
-        type: "line",
         label: "Macroscopic angle estimation",
         data: dataFit2,
         backgroundColor: "rgba(132, 255, 10, 1)",
@@ -75,13 +73,7 @@ const ScatterPlot = ({ data, dataFit, dataFit2, width, height }) => {
 
   return (
     <div>
-      <Scatter2
-        type="Line"
-        options={options}
-        data={dt}
-        height={height}
-        width={width}
-      />
+      <Scatter2 options={options} data={dt} height={height} width={width} />
     </div>
   );
 };

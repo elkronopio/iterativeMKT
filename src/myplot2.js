@@ -64,13 +64,7 @@ const ScatterPlot2 = ({ data, dataFit, width, height, label1, label2 }) => {
 
   return (
     <div>
-      <Scatter2
-        type="Line"
-        options={options}
-        data={dt}
-        height={height}
-        width={width}
-      />
+      <Scatter2 options={options} data={dt} height={height} width={width} />
     </div>
   );
 };
