@@ -5,6 +5,7 @@ import { Row, Container, Col } from "react-bootstrap";
 import { levenbergMarquardt } from "ml-levenberg-marquardt";
 import { CSVLink } from "react-csv";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Papa from "papaparse";
 
 const Mkt = ({}) => {
   const [mainPlot, setMainPlot] = useState(<div></div>);
@@ -354,6 +355,27 @@ const Mkt = ({}) => {
     // graphMKT(data, dataMicro, dataMacro);
   }
 
+  const changeHandler = (event) => {
+    // Passing file data (event.target.files[0]) to parse using Papa.parse
+    Papa.parse(event.target.files[0], {
+      header: true,
+      skipEmptyLines: true,
+      complete: function (results) {
+        let U = [];
+        let th = [];
+        results.data.map((d) => {
+          U.push(d["Ucl"]);
+          th.push(d["Theta"]);
+        });
+        setU(U);
+        setTh(th);
+        setData(data);
+        console.log("U", U);
+        console.log("th", th);
+      },
+    });
+  };
+
   const readFile = async (e) => {
     e.preventDefault();
     const reader = new FileReader();
@@ -465,7 +487,8 @@ const Mkt = ({}) => {
             type="file"
             id="file-selector"
             accept=".csv"
-            onChange={(e) => readFile(e)}
+            //onChange={(e) => readFile(e)}
+            onChange={changeHandler}
           ></input>
         </Row>
         <Row>{"Execute"} </Row>
