@@ -20,7 +20,6 @@ const Mkt = ({}) => {
   const [th, setTh] = useState([]);
   const [U, setU] = useState([]);
   const [data, setData] = useState([]);
-
   const [param, setParam] = useState([]);
   const [results, setResults] = useState([]);
 
@@ -255,7 +254,7 @@ const Mkt = ({}) => {
   }
 
   function compute() {
-    alert("Vamos2");
+    alert("Vamos de nuevo");
     const final = method(th, U);
     let dataMicro = [];
     for (let i = 0; i < final.uMicro.length; i++) {
