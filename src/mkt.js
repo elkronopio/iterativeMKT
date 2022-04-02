@@ -9,13 +9,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Mkt = ({}) => {
   const [mainPlot, setMainPlot] = useState(<div></div>);
 
-  const [gamma, setGamma] = useState(undefined);
-  const [visco, setVisco] = useState(undefined);
-  const [T, setT] = useState(undefined);
-  const [Ucrit, setUcrit] = useState(undefined);
-  const [k0, setK0] = useState(undefined);
-  const [lambda, setLambda] = useState(undefined);
-  const [th0, setTh0] = useState(undefined);
+  const [gamma, setGamma] = useState(0);
+  const [visco, setVisco] = useState(0);
+  const [T, setT] = useState(0);
+  const [Ucrit, setUcrit] = useState(0);
+  const [k0, setK0] = useState(0);
+  const [lambda, setLambda] = useState(0);
+  const [th0, setTh0] = useState(0);
 
   const [th, setTh] = useState([]);
   const [U, setU] = useState([]);
