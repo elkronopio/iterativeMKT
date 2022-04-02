@@ -112,9 +112,9 @@ const Mkt = ({}) => {
     );
     const sK0 = fittedParams.parameterValues[0] / (2 * sLambda);
 
-    console.log("t", t);
-    console.log("u", u);
-    console.log("k, l, t0", k, l, t0);
+    // console.log("t", t);
+    // console.log("u", u);
+    // console.log("k, l, t0", k, l, t0);
 
     return { k0: sK0, lambda: sLambda, th0: sTh0 };
   }
@@ -258,7 +258,7 @@ const Mkt = ({}) => {
   }
 
   function compute() {
-    alert("Vamos de nuevo");
+    alert("Vamos de nuevo again");
     const final = method(th, U);
     let dataMicro = [];
     for (let i = 0; i < final.uMicro.length; i++) {
@@ -371,6 +371,8 @@ const Mkt = ({}) => {
       setU(U);
       setTh(th);
       setData(data);
+      console.log("U", U);
+      console.log("th", th);
 
       // const final = method(th, U);
       // let dataMicro = [];
