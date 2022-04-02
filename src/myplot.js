@@ -8,6 +8,7 @@ import {
   Legend,
 } from "chart.js";
 import { Scatter, Chart } from "react-chartjs-2";
+import Chart from "chart.js/auto";
 ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 const ScatterPlot = ({ data, dataFit, dataFit2, width, height }) => {
