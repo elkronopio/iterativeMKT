@@ -112,6 +112,10 @@ const Mkt = ({}) => {
     );
     const sK0 = fittedParams.parameterValues[0] / (2 * sLambda);
 
+    console.log("t", t);
+    console.log("u", u);
+    console.log("k, l, t0", k, l, t0);
+
     return { k0: sK0, lambda: sLambda, th0: sTh0 };
   }
 
