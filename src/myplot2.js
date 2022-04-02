@@ -7,6 +7,7 @@ import {
   Tooltip,
   Legend,
   CategoryScale,
+  registerables,
 } from "chart.js";
 import { Scatter, Chart } from "react-chartjs-2";
 ChartJS.register(
@@ -17,6 +18,8 @@ ChartJS.register(
   Tooltip,
   Legend
 );
+
+ChartJS.register(...registerables);
 
 const ScatterPlot2 = ({ data, dataFit, width, height, label1, label2 }) => {
   function withChartSizeControl(Component) {
