@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+.mytext {
+  width: 50px;
+}
+
+.myLabel {
+  font-size: 10pt;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.myContainer {
+width: 200px;
+}
