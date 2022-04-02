@@ -255,7 +255,7 @@ const Mkt = ({}) => {
   }
 
   function compute() {
-    alert("Vamos");
+    alert("Vamos2");
     const final = method(th, U);
     let dataMicro = [];
     for (let i = 0; i < final.uMicro.length; i++) {
