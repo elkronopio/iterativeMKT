@@ -1,20 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import ScatterPlot from "./myplot";
 import ScatterPlot2 from "./myplot2";
 import { Row, Container, Col } from "react-bootstrap";
 import { levenbergMarquardt } from "ml-levenberg-marquardt";
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Mkt = ({}) => {
   const [mainPlot, setMainPlot] = useState(<div></div>);
-  // const [gamma, setGamma] = useState(0.066);
-  // const [visco, setVisco] = useState(0.00037);
-  // const [T, setT] = useState(300);
-  // const [Ucrit, setUcrit] = useState(-24.33);
-  // const [k0, setK0] = useState(10.9e9);
-  // const [lambda, setLambda] = useState(0.5e-9);
-  // const [th0, setTh0] = useState(70.7578);
 
   const [gamma, setGamma] = useState(undefined);
   const [visco, setVisco] = useState(undefined);
@@ -121,19 +114,6 @@ const Mkt = ({}) => {
     const sK0 = fittedParams.parameterValues[0] / (2 * sLambda);
 
     return { k0: sK0, lambda: sLambda, th0: sTh0 };
-  }
-
-  function graphMKT(data, dataMicro, dataMacro) {
-    const x = (
-      <ScatterPlot
-        data={data}
-        dataFit={dataMicro}
-        dataFit2={dataMacro}
-        width={600}
-        height={400}
-      />
-    );
-    setMainPlot(x);
   }
 
   function iterative(th0, k0, lambda, U, th) {
@@ -403,10 +383,6 @@ const Mkt = ({}) => {
     };
     reader.readAsText(e.target.files[0]);
   };
-
-  function saveFile() {
-    const result = window.chooseFileSystemEntries({ type: "save-file" });
-  }
 
   function control() {
     const x = (
