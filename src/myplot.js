@@ -48,7 +48,6 @@ const ScatterPlot = ({ data, dataFit, dataFit2, width, height }) => {
   const dt = {
     datasets: [
       {
-        type: "scatter",
         label: "Experiment",
         data: data,
         backgroundColor: "rgba(255, 99, 132, 1)",
