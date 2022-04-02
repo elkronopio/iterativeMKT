@@ -259,7 +259,7 @@ const Mkt = ({}) => {
   }
 
   function compute() {
-    alert("Vamos de nuevo again2");
+    alert("Vamos de nuevo again with csv");
     const final = method(th, U);
     let dataMicro = [];
     for (let i = 0; i < final.uMicro.length; i++) {
