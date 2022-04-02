@@ -37,7 +37,7 @@ const ScatterPlot = ({ data, dataFit, dataFit2, width, height }) => {
     );
   }
 
-  const Scatter2 = withChartSizeControl(Chart);
+  const Scatter2 = withChartSizeControl(Scatter);
 
   const options = {
     scales: {
